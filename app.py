@@ -14,7 +14,7 @@ if st.button("게시물 추가"):
     if post_title and post_content:
         post = {"제목": post_title, "내용": post_content}
         posts.append(post)
-        st.success("게시물이 추가되었습니다.")
+        st.success("게시물이 추가되었습니다2.")
     else:
         st.warning("게시물 제목과 내용을 모두 입력하세요.")
 

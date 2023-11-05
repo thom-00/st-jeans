@@ -59,3 +59,21 @@ posts = [
     {"제목": "한국에서 친구들과 함께 할 수 있는 활동을 추천해주세요!", "내용": "한국에서 친구들과 함께 즐길만한 활동이 있다면 추천 부탁드립니다!" },
     {"제목": "한국에서의 교환학생 생활을 기록하고 싶어요.", "내용": "한국에서의 교환학생 생활을 기록하고 소중한 추억을 남기고 싶습니다. 어떤 방법이 좋을까요?" }
 ]
+
+
+def get_posts_with_id():
+    posts_withID = []
+    for index, post in enumerate(posts):
+        posts_withID.append({'postID': index, 'title': post['제목'], 'contents': post['내용']})
+    return posts_withID
+
+def get_posts_with_id_and_title():
+    posts_withID = get_posts_with_id()
+    posts_withID_ID = [_['postID'] for _ in posts_withID]
+    posts_title = [_['title'] for _ in posts_withID]
+    return posts_withID_ID, posts_title
+
+def get_posts_contents():
+    posts_withID = get_posts_with_id()
+    posts_contents = [_['contents'] for _ in posts_withID]
+    return posts_contents
